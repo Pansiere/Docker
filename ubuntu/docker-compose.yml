@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  ubuntu:
+    build: .
+    container_name: ubuntu
+    hostname: ubuntu
+    privileged: true
+    volumes:
+      - ubuntu_data:/data
+    network_mode: host
+    restart: always
+    tty: true
+    stdin_open: true
+
+volumes:
+  ubuntu_data:
+    driver: local
