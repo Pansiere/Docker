@@ -1,4 +1,18 @@
-# Image Overview:
+# Running persistent ubuntu:latest in a docker container
+
+## Quick start
+
+```BASH
+cd /tmp && \
+git clone https://github.com/pansiere/Docker && \
+cd - && \
+cp -r /tmp/Docker/ubuntu_p . && \
+rm -rf /tmp/Docker && \
+cd ubuntu_p && \
+docker compose up -d
+```
+
+## Image Overview
 
 Uses Dockerfile to create an Ubuntu
 image with MySQL client, Git, and sets up zsh terminal via a cloned repository.
