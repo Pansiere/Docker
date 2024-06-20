@@ -73,12 +73,12 @@ Caso sua aplicação necessite de pacotes Python, como `Flask`, `Django` ou outr
 
 **1. Crie um repositório no Docker Hub:**
 
-Exemplo `opansiere/ubuntu`
+Exemplo `pansiere/ubuntu`
 
-`opansiere` deve ser seu nick de usuario do Docker Hub, e `ubuntu` é o nome do repositório criado.
+`pansiere` deve ser seu nick de usuario do Docker Hub, e `ubuntu` é o nome do repositório criado.
 
 ```md
-opansiere/ubuntu == nick/repositório
+pansiere/ubuntu == nick/repositório
 ```
 
 **2. Faça login no Docker Hub:**
@@ -106,13 +106,13 @@ docker compose build
 **3. Execute o comando para taguear a Imagem:**
 
 ```BASH
-docker tag app opansiere/ubuntu:latest
+docker tag app pansiere/ubuntu:latest
 ```
 
 **4. Execute o comando para dar push na Imagem para o Docker Hub:**
 
 ```BASH
-docker push opansiere/ubuntu:latest
+docker push pansiere/ubuntu:latest
 ```
 
 ## Passo 4 - Verifique a Imagem no Docker Hub
