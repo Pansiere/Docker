@@ -12,6 +12,12 @@ cd ubuntu_p && \
 docker compose up -d
 ```
 
+You can get inside the container by running:
+
+```BASH
+docker exec -it ubuntu_p /bin/zsh
+```
+
 ## Image Overview
 
 Uses Dockerfile to create an Ubuntu
