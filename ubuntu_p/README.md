@@ -3,6 +3,7 @@
 ## Quick start
 
 ```BASH
+docker pull opansiere/ubuntu && \
 cd /tmp && \
 git clone https://github.com/pansiere/Docker && \
 cd - && \
