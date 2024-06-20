@@ -103,13 +103,32 @@ cd /caminho/para/o/meuprojeto
 docker compose build
 ```
 
-**3. Execute o comando para taguear a Imagem:**
+**4. Liste as imagens com o comando:**
 
 ```BASH
-docker tag app pansiere/ubuntu:latest
+docker image ls
 ```
 
-**4. Execute o comando para dar push na Imagem para o Docker Hub:**
+Exemplo de saída:
+
+```BASH
+REPOSITORY               TAG       IMAGE ID       CREATED          SIZE
+pansiere/ubuntu          latest    e20332fd09d0   2 minutes ago   588MB
+```
+
+**5. Execute o comando para taguear sua Imagem:**
+
+```BASH
+docker tag e20332fd09d0 pansiere/ubuntu:latest
+```
+
+Explicação:
+
+```BASH
+docker tag [nome_da_imagem] [nome_do_repositorio]:[tag]
+```
+
+**6. Execute o comando para dar push na Imagem para o Docker Hub:**
 
 ```BASH
 docker push pansiere/ubuntu:latest
