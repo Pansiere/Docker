@@ -1,4 +1,4 @@
-# Running persistent ubuntu:latest in a docker container
+#Uses Dockerfile to create an Ubuntu image with MySQL client, Git, and sets up zsh terminal via a cloned repository
 
 ## Quick start
 
@@ -21,8 +21,7 @@ docker exec -it ubuntu_p /bin/zsh
 
 ## Image Overview
 
-Uses Dockerfile to create an Ubuntu
-image with MySQL client, Git, and sets up zsh terminal via a cloned repository.
+This configuration creates an Ubuntu-based Docker image that installs MySQL client and Git, then sets up the zsh terminal using a cloned repository. The Docker Compose file defines a service named 'ubuntu' with specified volumes and network settings.
 
 **Dockerfile:**
 
@@ -70,5 +69,3 @@ volumes:
     name: ubuntu_p
     driver: local
 ```
-
-This configuration creates an Ubuntu-based Docker image that installs MySQL client and Git, then sets up the zsh terminal using a cloned repository. The Docker Compose file defines a service named 'ubuntu' with specified volumes and network settings.
