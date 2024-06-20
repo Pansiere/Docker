@@ -3,16 +3,18 @@ version: "3.9"
 services:
   ubuntu:
     build: .
-    container_name: ubuntu
-    hostname: ubuntu
+    image: opansiere/ubuntu
+    container_name: ubuntu_p
+    hostname: ubuntu_p
     privileged: true
     volumes:
-      - ubuntu_data:/data
+      - ubuntu_p:/data
     network_mode: host
     restart: always
     tty: true
     stdin_open: true
 
 volumes:
-  ubuntu_data:
+  ubuntu_p:
+    name: ubuntu_p
     driver: local
