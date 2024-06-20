@@ -3,7 +3,7 @@ version: "3.9"
 services:
   ubuntu:
     build: .
-    image: opansiere/ubuntu
+    image: pansiere/ubuntu
     container_name: ubuntu_p
     hostname: ubuntu_p
     privileged: true

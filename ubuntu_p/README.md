@@ -3,7 +3,7 @@
 ## Quick start
 
 ```BASH
-docker pull opansiere/ubuntu && \
+docker pull pansiere/ubuntu && \
 cd /tmp && \
 git clone https://github.com/pansiere/Docker && \
 cd - && \
@@ -54,7 +54,7 @@ version: "3.9"
 services:
   ubuntu:
     build: .
-    image: opansiere/ubuntu
+    image: pansiere/ubuntu
     container_name: ubuntu_p
     hostname: ubuntu_p
     privileged: true
