@@ -1,14 +1,14 @@
-version: '3.9'
+version: "3.9"
 services:
   db:
     image: mysql/mysql-server:latest
     container_name: mysql
     restart: always
     environment:
-#      - MYSQL_DATABASE=mysqlDB
+      #      - MYSQL_DATABASE=mysqlDB
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
     ports:
-      - '3306:3306'
+      - "3306:3306"
     volumes:
       - mysql-volume:/var/lib/mysql
   phpmyadmin:
@@ -20,10 +20,11 @@ services:
       - PMA_USER=jp
       - PMA_PASSWORD=${MYSQL_ROOT_PASSWORD}
     ports:
-      - '8080:80'
+      - "8080:80"
 volumes:
   mysql-volume:
     driver: local
+#CREATE A '.env' file N paste into it: MYSQL_ROOT_PASSWORD=your_root_password
 
 # First step login root/your-mysql-password in your local phpmyadmin
 # it returns:
