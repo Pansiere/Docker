@@ -24,7 +24,7 @@ services:
 volumes:
   mysql-volume:
     driver: local
-#CREATE A '.env' file N paste into it: MYSQL_ROOT_PASSWORD=your_root_password
+# CREATE A '.env' file N paste into it: MYSQL_ROOT_PASSWORD=your_root_password
 
 # First step login root/your-mysql-password in your local phpmyadmin
 # it returns:
