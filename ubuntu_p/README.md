@@ -1,4 +1,4 @@
-#Uses Dockerfile to create an Ubuntu image with MySQL client, Git, and sets up zsh terminal via a cloned repository
+# Uses Dockerfile to create an Ubuntu image with MySQL client, Git, and sets up zsh terminal via a cloned repository
 
 ## Quick start
 

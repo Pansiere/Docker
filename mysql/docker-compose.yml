@@ -16,11 +16,11 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
-    container_name: my-phpmyadmin
+    container_name: phpmyadmin
     restart: always
-#    environment:
-#      - PMA_USER=jp
-#      - PMA_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    #    environment:
+    #      - PMA_USER=jp
+    #      - PMA_PASSWORD=${MYSQL_ROOT_PASSWORD}
     ports:
       - "8080:80"
     networks:
