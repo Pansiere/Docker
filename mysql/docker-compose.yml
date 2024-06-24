@@ -5,7 +5,6 @@ services:
     container_name: mysql
     restart: always
     environment:
-      #      - MYSQL_DATABASE=mysqlDB
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
     ports:
       - "3306:3306"
@@ -17,30 +16,10 @@ services:
     restart: always
     environment:
       - PMA_HOST=db
-      - PMA_USER=jp
+      - PMA_USER=yourusername
       - PMA_PASSWORD=${MYSQL_ROOT_PASSWORD}
     ports:
       - "8080:80"
 volumes:
   mysql-volume:
     driver: local
-# CREATE A '.env' file N paste into it: MYSQL_ROOT_PASSWORD=your_root_password
-
-# First step login root/your-mysql-password in your local phpmyadmin
-# it returns:
-#  mysqli::real_connect(): (HY000/1130): Host '172.21.0.3' is not allowed to connect to this MySQL server
-
-# docker exec -it <container_name_mysql> mysql -u root -p
-# ( you can get from: docker ps)
-# it will ask password of MYSQL_ROOT_PASSWORD
-
-# after accessing mysql, run command:
-# (AQUI TEM Q SER O USUARIO DO > PMA_USER= < E A SENHA DO > PMA_PASSWORD=${MYSQL_ROOT_PASSWORD} <)
-
-# CREATE USER 'jp'@'172.21.0.3' IDENTIFIED BY 'password';
-# GRANT ALL PRIVILEGES ON *.* TO 'jp'@'172.21.0.3' WITH GRANT OPTION;
-# FLUSH PRIVILEGES;
-
-# (172.21.0.3 is LocalHostIpAddress's phpMyAdmin)
-
-# login with root/your-mysql-password again!
