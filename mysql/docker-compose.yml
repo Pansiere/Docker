@@ -19,7 +19,7 @@ services:
     container_name: phpmyadmin
     restart: always
     #    environment:
-    #      - PMA_USER=jp
+    #      - PMA_USER=phpmyadmin
     #      - PMA_PASSWORD=${MYSQL_ROOT_PASSWORD}
     ports:
       - "8080:80"
