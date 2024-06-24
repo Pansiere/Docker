@@ -74,7 +74,7 @@ Inside the MySQL command-line interface, execute the following commands to creat
 
 ```sql
 CREATE USER 'yourusername'@'172.21.0.3' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON _._ TO 'yourusername'@'172.21.0.3' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'yourusername'@'172.21.0.3' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 ```
 
