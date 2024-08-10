@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-# Instalação dos pacotes necessários
+# Instalação dos pacotes necessários como root
 RUN apt-get update && \
     apt-get install -y \
         git && \
@@ -11,20 +11,23 @@ RUN apt-get update && \
 RUN useradd -m -s /bin/bash user && \
     echo "user ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
-RUN apt install sudo -y
+# Instalação do sudo
+RUN apt-get install -y sudo
 
-# Clonando o repositório e executando os scripts como o usuário 'user'
+# Executando comandos como usuário 'user'
 USER user
+
+# Clonando o repositório e executando os scripts como 'user'
 RUN sudo apt update && \
     sudo apt install git -y && \
-    cd ~/ && \
+    cd /home/user && \
     git clone https://github.com/Pansiere/Automations.git && \
     cd Automations/zsh && \
     sudo chmod +x setup.sh && \
-    ./setup.sh && \
-    cd
+    ./setup.sh
 
-    WORKDIR /home/user
+# Definindo o diretório de trabalho como 'user'
+WORKDIR /home/user
 
 # Comando padrão para execução do container (se houver)
 CMD ["bash"]
