@@ -12,20 +12,20 @@ services:
       - mysql-volume:/var/lib/mysql
     networks:
       network:
-        ipv4_address: 172.30.0.2
+        ipv4_address: 172.29.0.2
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     container_name: phpmyadmin
     restart: always
-    #    environment:
-    #      - PMA_USER=phpmyadmin
-    #      - PMA_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    environment:
+      - PMA_USER=phpmyadmin
+      - PMA_PASSWORD=${MYSQL_ROOT_PASSWORD}
     ports:
       - "8080:80"
     networks:
       network:
-        ipv4_address: 172.30.0.3
+        ipv4_address: 172.29.0.3
 
 volumes:
   mysql-volume:
@@ -36,4 +36,4 @@ networks:
     driver: bridge
     ipam:
       config:
-        - subnet: 172.30.0.0/16
+        - subnet: 172.29.0.0/16
