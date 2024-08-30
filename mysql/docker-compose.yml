@@ -25,7 +25,7 @@ services:
       - "8080:80"
     networks:
       environment_network:
-        ipv4_address: 172.29.0.3s
+        ipv4_address: 172.29.0.3
 
 networks:
   environment_network:
