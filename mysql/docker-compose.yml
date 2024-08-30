@@ -1,38 +1,36 @@
-version: "3.9"
+version: "3.1"
 services:
-  db:
-    image: mysql/mysql-server:latest
+  mysql:
+    image: "mysql:8.0"
     container_name: mysql
-    restart: always
+    working_dir: /application
+    volumes:
+      - ".:/application"
+      - "./.mysql-data/db:/var/lib/mysql"
     environment:
       - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=DB
     ports:
       - "3306:3306"
-    volumes:
-      - mysql-volume:/var/lib/mysql
     networks:
-      network:
+      environment_network:
         ipv4_address: 172.29.0.2
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     container_name: phpmyadmin
-    restart: always
     environment:
-      - PMA_USER=phpmyadmin
+      - PMA_HOST=mysql
+      - PMA_USER=root
       - PMA_PASSWORD=password
     ports:
       - "8080:80"
     networks:
-      network:
-        ipv4_address: 172.29.0.3
-
-volumes:
-  mysql-volume:
-    driver: local
+      environment_network:
+        ipv4_address: 172.29.0.5
 
 networks:
-  network:
+  environment_network:
     driver: bridge
     ipam:
       config:
