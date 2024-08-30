@@ -5,7 +5,7 @@ services:
     container_name: mysql
     restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=password
     ports:
       - "3306:3306"
     volumes:
@@ -20,7 +20,7 @@ services:
     restart: always
     environment:
       - PMA_USER=phpmyadmin
-      - PMA_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - PMA_PASSWORD=password
     ports:
       - "8080:80"
     networks:
