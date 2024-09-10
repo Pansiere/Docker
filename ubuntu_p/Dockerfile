@@ -31,3 +31,5 @@ WORKDIR /home/user
 
 # Comando padrão para execução do container (se houver)
 CMD ["bash"]
+
+# Preciso agrupar todos esse RUN ainda, estou sem tempo :D. Assim que possível arrumo :)
