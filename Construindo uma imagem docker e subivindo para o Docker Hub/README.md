@@ -147,3 +147,5 @@ Confirme se a imagem foi carregada corretamente no Docker Hub
 - **Outros arquivos necessários:** Caso sua aplicação exija outros arquivos, certifique-se de incluí-los no diretório conforme necessário.
 
 **Seguindo esse guia, você deve conseguir construir e subir sua aplicação Dockerizada com sucesso.**
+
+Made by: João Pedro Vicente Pansiere
