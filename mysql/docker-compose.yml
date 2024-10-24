@@ -3,6 +3,7 @@ services:
   mysql:
     image: "mysql:8.0"
     container_name: mysql
+    restart: always
     volumes:
       - "./.mysql-data/db:/var/lib/mysql"
     environment:
@@ -17,6 +18,7 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     container_name: phpmyadmin
+    restart: always
     environment:
       - PMA_HOST=mysql
       - PMA_USER=root
