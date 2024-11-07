@@ -11,7 +11,8 @@ Este guia oferece um passo a passo para configurar um ambiente de desenvolviment
 ### 1. Clone os Repositórios e Configure o Projeto
 
 ```sh
-git clone https://github.com/pansiere/docker-laravel.git setup-docker-laravel && \
+git clone https://github.com/pansiere/docker.git && \
+mv docker/Laravel setup-docker-laravel && \
 git clone https://github.com/laravel/laravel.git docker-laravel && \
 rm docker-laravel/.env && \
 rm docker-laravel/.env.example && \
