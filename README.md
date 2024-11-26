@@ -10,7 +10,7 @@ docker builder prune --all --force
 
 Este comando remove todos os build cache, forçando o Docker a reconstruir tudo desde o início na próxima vez que você construir as imagens.
 
-```markdown
+
 # Docker Commands Cheat Sheet
 
 **By Dennis**  
